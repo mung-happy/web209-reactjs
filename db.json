@@ -1,0 +1,423 @@
+{
+  "comics": [
+    {
+      "id": 1,
+      "title": "Học viện anh hùng",
+      "image": "https://i.truyenvua.com/ebook/190x247/boku-no-hero-academia_1552459650.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [1,2,5],
+      "author": "Đang cập nhật",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link":"",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "sjdnvvn",
+      "goodComic": true
+    },
+    {
+      "id": 2,
+      "title": "Black Clover - Thế Giới Phép Thuật",
+      "image": "https://i.truyenvua.com/ebook/190x247/black-clover_1552555341.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Tabata Yuuki",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Aster và Yuno là hai đứa trẻ bị bỏ rơi ở nhà thờ và cùng nhau lớn lên tại đó. Khi còn nhỏ, chúng đã hứa với nhau xem ai sẽ trở thành Ma pháp vương tiếp theo. Thế nhưng, khi cả hai lớn lên, mọi sô chuyện đã thay đổi. Yuno là thiên tài ma pháp với sức mạnh tuyệt đỉnh trong khi Aster lại không thể sử dụng ma pháp và cố gắng bù đắp bằng thể lực. Khi cả hai được nhận sách phép vào tuổi 15, Yuno đã được ban cuốn sách phép cỏ bốn bá (trong khi đa số là cỏ ba lá) mà Aster lại không có cuốn nào. Tuy nhiên, khi Yuno bị đe dọa, sự thật về sức mạnh của Aster đã được giải mã- cậu ta được ban cuốn sách phép cỏ năm lá, cuốn sách phá ma thuật màu đen. Bấy giờ, hai người bạn trẻ đang hướng ra thế giới, cùng chung mục tiêu.",
+      "goodComic": true
+    },
+    {
+      "id": 3,
+      "title": "Thất Hình Đại Tội",
+      "image": "https://i.truyenvua.com/ebook/190x247/nanatsu-no-taizai_1442987070.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "“Thất đại ác nhân”, một nhóm chiến binh có tham vọng lật đổ vương quốc Britannia, được cho là đã bị tiêu diệt bởi các “hiệp sĩ thánh chiến” mặc dù vẫn còn 1 số người cho rằng họ vẫn còn sống. 10 năm sau, Các hiệp sĩ thánh chiến đã làm 1 cuộc đảo chính và khống chế đức vua, họ trở thành người cai trị độc tài mới của vương quốc. Elizabeth, con gái duy nhất của nhà vua, đã lên đường tìm “thất đại ác nhân” để nhờ họ tái chiếm lại vương quốc. Công chúa có thành công trong việc tìm kiếm “thất đại ác nhân”, các “hiệp sĩ thánh chiến” sẽ làm gì để ngăn chăn cô? xem các chap truyện sau sẽ rõ.",
+      "goodComic": true
+    },
+    {
+      "id": 4,
+      "title": "Nhất Quỷ Nhì Ma, Thứ Ba Takagi",
+      "image": "https://i.truyenvua.com/ebook/190x247/karakai-jouzu-no-takagi-san_1447292171.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Yamamoto Souichirou",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "“Đỏ mặt là thua!” Với niềm tin như vậy, mỗi ngày đến trường với Nishikata là một ngày thua. Cậu học sinh trung học đáng thương luôn bị “quê” bởi những trò chọc phá của cô nàng ngồi cạnh bàn Takagi-san, và dẫu cho cậu bé luôn ấp ủ mộng báo thù cũng như không ngừng bày mưu tính kế, thì cuối cùng những chiêu trò của cậu lại “gậy ông đập lưng ông”.Theo đánh giá của giới chuyên môn, cách biệt kèo trên và kèo dưới là rất xa, cửa thắng cho cậu bé là cực thấp, bởi có vẻ như cô bé Takagi còn có khả năng nắm bắt được hết những suy nghĩ toan tính của cậu. Song, nhìn về những gì Yokoi đã làm được trước Seki-kun trong Tonari no Seki-kun, liệu chúng ta có nên đặt chút niềm tin vào màn lật kèo phút chót của Nishikata?",
+      "goodComic": true
+    },
+    {
+      "id": 5,
+      "title": "Đại Chu Tiên Lại",
+      "image": "https://i.truyenvua.com/ebook/190x247/dai-chu-tien-lai_1633681066.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Xuyên việt qua thế giới Tiên hiệp, nơi mà yêu mị khắp nơi, quần ma loạn vũ, Lý Mộ ban đầu thực sự chỉ an ổn sống qua ngày, nhưng tiểu hồ ly mà hắn vô tình cứu được lại đột nhiên mở miệng nói tiếng người, rằng nó muốn lấy thân báo đáp...Đây là câu chuyện về một thanh niên hiện đại xuyên việt tới thế giới Tiên hiệp, trảm yêu trừ ma, giúp đỡ chính nghĩa.",
+      "goodComic": true
+    },
+    {
+      "id": 6,
+      "title": "Bạn Gái Tôi Là Một Đại Tiểu Thư Xấu Xa Sao?",
+      "image": "https://i.truyenvua.com/ebook/190x247/ban-gai-toi-la-mot-dai-tieu-thu-xau-xa-sao_1703692229.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Truyện kể về nam chính xuyên không đến một vùng thôn quê hẻo lánh cách 2 tiếng mới có một chuyến xe bus. Cậu ấy tự dựa vào sức mình trở thành nam sinh tài hoa ưu tú, đúng lúc này thì hệ thống mới được kích hoạt sau 15 năm. Nam chính phải tán tỉnh các mỹ nữ, thông qua yêu đương nhận được điểm tích lũy của hệ thống tình yêu. Cậu quyết tâm trở thành soái ca học đường, cho đến khi đụng phải đại tiểu thư với tính cách quái ác. Nam chính muốn thoát khỏi sự trói buộc số phận, nhưng câu chuyện của họ, hay có thể nói là cơn ác mộng của cậu ấy... chỉ mới bắt đầu thôi.",
+      "goodComic": false
+    },
+    {
+      "id": 7,
+      "title": "Tuyệt Sắc Đạo Lữ Đều Nói Ngô Hoàng Thể Chất Vô Địch",
+      "image": "https://i.truyenvua.com/ebook/190x247/tuyet-sac-dao-lu-deu-noi-ngo-hoang-the-chat-vo-dich_1672882364.jpg?gt=hdfgdfg&mobile=22",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Tôi chỉ là một người bình thường, nhưng tôi đã trở thành hóa thân của Hoàng đế quỷ, và tôi phải chiến đấu với đủ loại mẹ thú để phục hưng uy tín của gia tộc? Phượng hoàng yêu kiều kiều diễm tiểu thư, ngoan ngoãn dễ thương tiểu thư Chồn sương, cứng rắn vô song tiểu thư Panda... Đau quá, ta tốt nhất đi càn quét thiên hạ!",
+      "goodComic": false
+    },
+    {
+      "id": 8,
+      "title": "Kyou Kara Ore Wa Loli No Himo!",
+      "image": "https://i.truyenvua.com/ebook/190x247/kyou-kara-ore-wa-loli-no-himo_1527685027.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Tôi là Tendou Haru, hướng mục tiêu đến việc trở thành một mangaka. Một nhóc học sinh tiểu học xinh đẹp giàu nứt đố đổ vách, Nijou Touka là người hâm mộ cuồng nhiệt của tôi, và trên tất thảy, là cô nhóc nói rằng mình sẽ trở thành người bảo hộ cho tôi. Cứ như thế, lối sống ăn bám vào người khác lý tưởng của tôi đã bắt đầu ..",
+      "goodComic": true
+    },
+    {
+      "id": 9,
+      "title": "Sự Trỗi Dậy Của Anh Hùng Khiên",
+      "image": "https://i.truyenvua.com/ebook/190x247/su-troi-day-cua-anh-hung-khien-ngoai-truyen-cua-raphtalia_1700131890.png?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Là câu chuyện về một nam thanh niên otaku bị triệu hồi vào một Thế giới game nhập vai...",
+      "goodComic": true
+    },
+    {
+      "id": 10,
+      "title": "Listen To My Lady's Story―Villainess Conquest Record",
+      "image": "https://i.truyenvua.com/ebook/190x247/listen-to-my-ladys-story%E2%80%95villainess-conquest-record_1705508306.png?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Crow, một quản gia trung thành của một nữ phản diện, nhận ra thông qua một loạt các sự kiện tình cờ rằng mình đã được tái sinh vào một thế giới khác.Với một quan điểm mới về cuộc sống, anh nhận ra rằng mình đã bị đối xử tệ bạc bởi người phụ nữ quý phái, kiêu căng và tự phụ mà anh gọi là cô chủ cho đến bây giờ, và anh nổi giận với sự bất công đó.Tuy nhiên, sau khi quyết định trả thù cô theo một cách mạo hiểm, anh nhận ra rằng cô ấy dễ xử lý hơn nhiều so với vẻ bề ngoài của cô...Đây là câu chuyện về cách một người quản gia isekai thuần phục cô chủ phản diện của mình theo cách gợi cảm, nhưng kết quả là khiến cô thực sự hạnh phúc.",
+      "goodComic": false
+    },
+    {
+      "id": 11,
+      "title": "Chotto Ippai! Loli Loli",
+      "image": "https://i.truyenvua.com/ebook/190x247/chotto-ippai-loli-loli_1544541095.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Loli siêu moe làm trong nhà hàng.",
+      "goodComic": false
+    },
+    {
+      "id": 12,
+      "title": "Chuyển Sinh Thành Lợn Ở Thế Giới Khác",
+      "image": "https://i.truyenvua.com/ebook/190x247/chuyen-sinh-thanh-lon-o-the-gioi-khac_1654128410.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Takuma Sakai",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Một thanh niên chết vì ăn gan lợn sống và chuyển sinh thành lợn ở thế giới khác",
+      "goodComic": false
+    },
+    {
+      "id": 13,
+      "title": "Darling In The Franxx",
+      "image": "https://i.truyenvua.com/ebook/190x247/chien-tran-nguoi-may_1540737364.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Yabuki Kentarou",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Bối cảnh truyện diễn ra trong 1 tương lai xa, khi mà mặt đất đã dần bị tàn phá nặng nề. Con người đã xây dựng nên những pháo đài di động khổng lồ được gọi là các 'Vườn ươm'. Đây là nơi họ đào tạo nên những 'đứa trẻ' đặc biệt, những đứa bé không hề biết gì về thế giới rộng lớn bên ngoài kia ... Sự tồn tại của những đứa trẻ này là vì một mục đích, đó là tiêu diệt những sinh vật khổng lồ bí ẩn được gọi là các 'Kyoryuu'. Những đứa trẻ phải phối hợp với nhau từ khi còn bé để có thể điều khiển các chiến binh robot có tên là 'Franxx' chống lại những sinh vật bí ẩn kia. Đây là câu truyện về anh chàng Hiro (Code: 016) , người gặp vấn đề về năng lực và cảm thấy sự tồn tại của mình là thừa thãi cho đến khi cậu gặp 1 cô gái kì lạ, bí danh '002 ....",
+      "goodComic": false
+    },
+    {
+      "id": 14,
+      "title": "Cô Vợ Tu Tiên",
+      "image": "https://i.truyenvua.com/ebook/190x247/co-vo-tu-tien_1686365345.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Bối cảnh truyện diễn ra trong 1 tương lai xa, khi mà mặt đất đã dần bị tàn phá",
+      "goodComic": false
+    },
+    {
+      "id": 15,
+      "title": "Thanh Gươm Diệt Quỷ",
+      "image": "https://i.truyenvua.com/ebook/190x247/kimetsu-no-yaiba_1478064120.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Gotouge Koyoharu",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Kimetsu no Yaiba – Tanjirou là con cả của gia đình vừa mất cha. Một ngày nọ, Tanjirou đến thăm thị trấn khác để bán than, khi đêm về cậu ở nghỉ tại nhà người khác thay vì về nhà vì lời đồn thổi về ác quỷ luôn rình mò gần núi vào buổi tối. Khi cậu về nhà vào ngày hôm sau, bị kịch đang đợi chờ cậu…",
+      "goodComic": true
+    },
+    {
+      "id": 16,
+      "title": "Vai Ác Sư Tôn Mang Theo Các Đồ Đệ Vô Địch Thiên Hạ",
+      "image": "https://i.truyenvua.com/ebook/190x247/vai-ac-su-ton-mang-theo-cac-do-de-vo-dich-thien-ha_1658578588.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Nhân vật chính thẩm thích cảm giác rất đau khổ. Hắn vì sao lại xuyên không vào truyện bản thân viết? Hơn nữa còn không phải là vai chính! Càng quá đáng hơn là vai chính sao lại biến thành nữ? Đã thế hắn rõ ràng muốn bồi dưỡng vai chính thành đồ đệ, vì sao cả một đám đều coi thành sư nương rồi? Vai chính: Sư phụ! Hôm nay ngài muốn ăn ta trước, hay là xử lý xong các sư tỷ rồi mới ăn ta?",
+      "goodComic": false
+    },
+    {
+      "id": 17,
+      "title": "Đề Đốc Tự Ta Tu Dưỡng",
+      "image": "https://i.truyenvua.com/ebook/190x247/de-doc-tu-ta-tu-duong_1617961732.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Truyện tranh Đề Đốc Tự Ta Tu Dưỡng được cập nhật nhanh và đầy đủ nhất tại TruyenQQ. Bạn đọc đừng quên để lại bình luận và chia sẻ, ủng hộ TruyenQQ ra các chương mới nhất của truyện Đề Đốc Tự Ta Tu Dưỡng.",
+      "goodComic": false
+    },
+    {
+      "id": 18,
+      "title": "Ore Wa Lolicon Ja Nai!",
+      "image": "https://i.truyenvua.com/ebook/190x247/ore-wa-lolicon-ja-nai_1580887599.jpg?gt=hdfgdfg&mobile=2",
+      "categories": [12, 7, 25],
+      "author": "Updateting",
+      "chapters": [
+        {
+          "numberChapter": 1,
+          "link": "abc",
+          "createdAt":"2024-03-12T05:24:27.144Z"
+        }
+      ],
+      "description": "Anh em lolicon đâu hãy cho ta xem cánh tay của mấy thím nào ... à mà bộ này nó khá giống bộ siêu phẩm xuyên không gian về lập dàn harem loli",
+      "goodComic": false
+    }
+  ],
+  "users": [],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Action"
+    },
+    {
+      "id": 2,
+      "title": "Adventure"
+    },
+    {
+      "id": 3,
+      "title": "Anime"
+    },
+    {
+      "id": 4,
+      "title": "Cổ Đại"
+    },
+    {
+      "id": 5,
+      "title": "Comedy"
+    },
+    {
+      "id": 6,
+      "title": "Comic"
+    },
+    {
+      "id": 7,
+      "title": "Demons"
+    },
+    {
+      "id": 8,
+      "title": "Detective"
+    },
+    {
+      "id": 9,
+      "title": "Doujinshi"
+    },
+    {
+      "id": 10,
+      "title": "Drama"
+    },
+    {
+      "id": 11,
+      "title": "Bender"
+    },
+    {
+      "id": 12,
+      "title": "Harem"
+    },
+    {
+      "id": 13,
+      "title": "Horror"
+    },
+    {
+      "id": 14,
+      "title": "Huyền Huyễn"
+    },
+    {
+      "id": 15,
+      "title": "Isekai"
+    },
+    {
+      "id": 16,
+      "title": "Josei"
+    },
+    {
+      "id": 17,
+      "title": "Mafia"
+    },
+    {
+      "id": 18,
+      "title": "Magic"
+    },
+    {
+      "id": 19,
+      "title": "Manhua"
+    },
+    {
+      "id": 20,
+      "title": "Manhwa"
+    },
+    {
+      "id": 21,
+      "title": "Arts"
+    },
+    {
+      "id": 22,
+      "title": "Military"
+    },
+    {
+      "id": 23,
+      "title": "Mystery"
+    },
+    {
+      "id": 24,
+      "title": "Ngôn Tình"
+    },
+    {
+      "id": 25,
+      "title": "One shot"
+    },
+    {
+      "id": 26,
+      "title": "Psychological"
+    },
+    {
+      "id": 27,
+      "title": "Romance"
+    },
+    {
+      "id": 28,
+      "title": "School Life"
+    },
+    {
+      "id": 29,
+      "title": "Sci-fi"
+    },
+    {
+      "id": 30,
+      "title": "Seinen"
+    },
+    {
+      "id": 31,
+      "title": "Shoujo"
+    },
+    {
+      "id": 31,
+      "title": "Chuyển Sinh"
+    }
+  ]
+}
