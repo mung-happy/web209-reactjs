@@ -1,18 +1,39 @@
-import Header from "../components/Header";
-import TopComic from "../components/TopComic";
-import GoodComic from "../components/GoodComic";
-import Menu from "../components/Menu";
-import ComicList from "../components/ComicList";
-import Footer from "../components/Footer";
+import { useQuery } from "@tanstack/react-query";
+import Baner from "../components/Baner";
+import productService from "../services/product";
+import { Product } from "../types/product";
+import ProductItem from "../components/ProductItem";
+import Ads from "../components/Ads";
 const HomePage = () => {
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["products"],
+    queryFn: () => productService.getList(12),
+  });
+
   return (
-    <div className="bg-black">
-      <Header />
-      <Menu />
-      <TopComic />
-      <GoodComic />
-      <ComicList />
-      <Footer />
+    <div>
+      <Baner />
+      <div className="container mx-auto">
+        <div className="flex items-end justify-between">
+          <div>
+            <h2 className="text-5xl font-bold">Featured Products</h2>
+            <p className="text-lg my-4">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.{" "}
+            </p>
+          </div>
+          <div>
+            <button className="py-3 px-6 border border-black rounded">
+              View all
+            </button>
+          </div>
+        </div>
+        <div className="grid grid-cols-4 gap-8 mt-8">
+          {data?.data.map((product: Product) => (
+            <ProductItem key={product.id} product={product} />
+          ))}
+        </div>
+      </div>
+      <Ads />
     </div>
   );
 };
