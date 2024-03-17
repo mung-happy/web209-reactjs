@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Header = () => {
   return (
     <header>
@@ -139,24 +141,24 @@ const Header = () => {
             <div>
               <ul className="flex items-center gap-6">
                 <li>
-                  <a href="#" className="p-2.5 block border-b border-black">
+                  <Link to="/" className="p-2.5 block border-b border-black">
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="p-2.5 block">
+                  <Link to="/products" className="p-2.5 block">
                     Products
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="p-2.5 block">
+                  <Link to="#" className="p-2.5 block">
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#" className="p-2.5 block">
+                  <Link to="#" className="p-2.5 block">
                     Contact
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>

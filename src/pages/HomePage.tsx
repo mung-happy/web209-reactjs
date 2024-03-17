@@ -4,10 +4,11 @@ import productService from "../services/product";
 import { Product } from "../types/product";
 import ProductItem from "../components/ProductItem";
 import Ads from "../components/Ads";
+import { Link } from "react-router-dom";
 const HomePage = () => {
   const { data, isLoading, isError } = useQuery({
     queryKey: ["products"],
-    queryFn: () => productService.getList(12),
+    queryFn: () => productService.getList(8),
   });
 
   return (
@@ -22,9 +23,11 @@ const HomePage = () => {
             </p>
           </div>
           <div>
-            <button className="py-3 px-6 border border-black rounded">
-              View all
-            </button>
+            <Link to="/products">
+              <button className="py-3 px-6 border border-black rounded">
+                View all
+              </button>
+            </Link>
           </div>
         </div>
         <div className="grid grid-cols-4 gap-8 mt-8">
