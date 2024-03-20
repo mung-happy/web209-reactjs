@@ -4,18 +4,31 @@ import View from "./layouts/View";
 import DetailPage from "./pages/DetailPage";
 import HomePage from "./pages/HomePage";
 import ProductsPage from "./pages/ProductsPage";
-
+import Admin from "./layouts/Admin";
+import AdminProductList from "./pages/AdminProductList";
+import Spinner from "./components/Spinner";
+import { createContext, useReducer } from "react";
+import spinnerAction from "./action/spinner";
+export const spinnerCT = createContext([(e: any) => {}]);
 const App = () => {
+  const [state, dispatch] = useReducer(spinnerAction, false);
+
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<View />}>
-          <Route index element={<HomePage />} />
-          <Route path="products/:id" element={<DetailPage />} />
-          <Route path="products" element={<ProductsPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <spinnerCT.Provider value={[dispatch]}>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<View />}>
+            <Route index element={<HomePage />} />
+            <Route path="products/:id" element={<DetailPage />} />
+            <Route path="products" element={<ProductsPage />} />
+          </Route>
+          <Route path="/admin" element={<Admin />}>
+            <Route index element={<AdminProductList />} />
+          </Route>
+        </Routes>
+        {state && <Spinner />}
+      </BrowserRouter>
+    </spinnerCT.Provider>
   );
 };
 

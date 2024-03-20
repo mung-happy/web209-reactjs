@@ -1,90 +1,61 @@
-import React from "react";
-
-const Pagination = () => {
+import { Link } from "react-router-dom";
+type Props = {
+  totalPage: number;
+  page: number;
+};
+const Pagination = ({ totalPage, page }: Props) => {
   return (
-    <div>
-      <nav
-        className="isolate inline-flex -space-x-px rounded-md shadow-sm"
-        aria-label="Pagination"
-      >
-        <a
-          href="#"
-          className="relative inline-flex items-center rounded-l-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-        >
-          <span className="sr-only">Previous</span>
-          <svg
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M12.79 5.23a.75.75 0 01-.02 1.06L8.832 10l3.938 3.71a.75.75 0 11-1.04 1.08l-4.5-4.25a.75.75 0 010-1.08l4.5-4.25a.75.75 0 011.06.02z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
-        {/* Current: "z-10 bg-indigo-600 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600", Default: "text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:outline-offset-0" */}
-        <a
-          href="#"
-          aria-current="page"
-          className="relative z-10 inline-flex items-center bg-indigo-600 px-4 py-2 text-sm font-semibold text-white focus:z-20 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-        >
-          1
-        </a>
-        <a
-          href="#"
-          className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-        >
-          2
-        </a>
-        <a
-          href="#"
-          className="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex"
-        >
-          3
-        </a>
-        <span className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-300 focus:outline-offset-0">
-          ...
-        </span>
-        <a
-          href="#"
-          className="relative hidden items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0 md:inline-flex"
-        >
-          8
-        </a>
-        <a
-          href="#"
-          className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-        >
-          9
-        </a>
-        <a
-          href="#"
-          className="relative inline-flex items-center px-4 py-2 text-sm font-semibold text-gray-900 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-        >
-          10
-        </a>
-        <a
-          href="#"
-          className="relative inline-flex items-center rounded-r-md px-2 py-2 text-gray-400 ring-1 ring-inset ring-gray-300 hover:bg-gray-50 focus:z-20 focus:outline-offset-0"
-        >
-          <span className="sr-only">Next</span>
-          <svg
-            className="h-5 w-5"
-            viewBox="0 0 20 20"
-            fill="currentColor"
-            aria-hidden="true"
-          >
-            <path
-              fillRule="evenodd"
-              d="M7.21 14.77a.75.75 0 01.02-1.06L11.168 10 7.23 6.29a.75.75 0 111.04-1.08l4.5 4.25a.75.75 0 010 1.08l-4.5 4.25a.75.75 0 01-1.06-.02z"
-              clipRule="evenodd"
-            />
-          </svg>
-        </a>
-      </nav>
+    <div aria-label="Page navigation example">
+      <ul className="inline-flex -space-x-px text-sm ">
+        <li>
+          {page === 1 ? (
+            <span className="flex items-center justify-center opacity-50 cursor-not-allowed px-3 h-8 ms-0 leading-tight bg-white border border-e-0 rounded-s-lg dark:bg-white/20 dark:border-gray-700">
+              Previous
+            </span>
+          ) : (
+            <Link
+              to={`?page=${page - 1}`}
+              className="flex items-center justify-center hover:bg-gray-300 cursor-pointer px-3 h-8 ms-0 leading-tight bg-white border border-e-0 border-gray-300 rounded-s-lg dark:bg-white dark:border-gray-700"
+            >
+              Previous
+            </Link>
+          )}
+        </li>
+        {Array(totalPage)
+          .fill(0)
+          .map((_, index) => {
+            const pageNumber = index + 1;
+            const isActive = page === pageNumber;
+            return (
+              <li key={index}>
+                <Link
+                  to={`?page=${pageNumber}`}
+                  className={`flex items-center justify-center px-3 h-8 leading-tight hover:bg-gray-300 border border-gray-700 ${
+                    isActive && "bg-gray-300"
+                  }`}
+                >
+                  {pageNumber}
+                </Link>
+              </li>
+            );
+          })}
+        <li>
+          {page === totalPage ? (
+            <span className="cursor-not-allowed flex items-center opacity-50 justify-center px-3 h-8 ms-0 leading-tight bg-white border border-gray-300 rounded-e-md dark:bg-white dark:border-gray-700">
+              Next
+            </span>
+          ) : (
+            <Link
+              to={`?page=${page + 1 === totalPage ? totalPage : page + 1}`}
+              className={`cursor-no-drop ${
+                page !== totalPage && "hover:bg-gray-300 cursor-pointer"
+              } flex items-center justify-center px-3 h-8 ms-0 leading-tight bg-white border border-gray-300 rounded-e-md dark:bg-white dark:border-gray-700`}
+            >
+              Next
+            </Link>
+          )}
+        </li>
+      </ul>
     </div>
   );
 };

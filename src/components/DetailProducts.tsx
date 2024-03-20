@@ -1,6 +1,6 @@
 import { Product } from "../types/product";
 type Props = {
-  product: Product;
+  product: Product | null;
 };
 const DetailProducts = ({ product }: Props) => {
   return (
@@ -11,27 +11,27 @@ const DetailProducts = ({ product }: Props) => {
           <span>/</span>
           <span className="opacity-50">Nothing</span>
           <span>/</span>
-          <span>{product.title}</span>
+          <span>{product?.title}</span>
         </div>
         <div className="flex gap-[70px] mt-20">
           <div className="flex gap-[30px]">
             <div className="flex flex-col gap-4">
-              {product.images.map((image, index) => (
+              {product?.images.map((image, index) => (
                 <div
                   key={index}
                   className="w-[170px] h-[138px] bg-[#F5F5F5] flex items-center justify-center"
                 >
-                  <img src={image} alt="" />
+                  <img className="w-24 h-24 object-cover" src={image} alt="" />
                 </div>
               ))}
             </div>
             <div className="flex justify-center items-center w-[500px] bg-[#F5F5F5]">
-              <img src={product.thumbnail} alt="" />
+              <img src={product?.thumbnail} alt="" />
             </div>
           </div>
           <div>
             <div className="border-b-2 pb-6 border-black/50">
-              <h1 className="text-2xl font-bold">{product.title}</h1>
+              <h1 className="text-2xl font-bold">{product?.title}</h1>
               <div className="flex items-center gap-4 h-max text-sm my-4">
                 <div className="flex items-center gap-2">
                   <div className="flex items-center gap-1">
@@ -104,10 +104,10 @@ const DetailProducts = ({ product }: Props) => {
                 <span className="text-green-400">In Stock</span>
               </div>
               <div className="text-2xl mb-6">
-                <span>${product.title}</span>
+                <span>${product?.price}</span>
               </div>
               <div>
-                <span className="text-sm">{product.description}</span>
+                <span className="text-sm">{product?.description}</span>
               </div>
             </div>
             <div className="flex items-center justify-between mt-8">

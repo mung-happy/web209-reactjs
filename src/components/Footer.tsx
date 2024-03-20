@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer className="py-20">
-      <div className="flex justify-between">
+      <div className="flex justify-between container">
         <div className="grid grid-cols-4 gap-10">
           <div>
             <img className="object-contain" src="logo.png" alt="" />
