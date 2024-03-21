@@ -1,5 +1,6 @@
 import { Outlet } from "react-router-dom";
 import { SidebarAdmin } from "../components/SidebarAdmin";
+import { ToastContainer } from "react-toastify";
 
 const Admin = () => {
   return (
@@ -18,6 +19,7 @@ const Admin = () => {
             </div>
           </div>
         </div>
+        <ToastContainer />
       </div>
     </>
   );

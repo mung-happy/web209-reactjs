@@ -1,9 +1,11 @@
-import React, { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Product } from "../types/product";
 import productService from "../services/product";
 import { Link, useSearchParams } from "react-router-dom";
 import { spinnerCT } from "../App";
 import Pagination from "../components/Pagination";
+import { toast } from "react-toastify";
+import { Popconfirm } from "antd";
 const limit = 10;
 const AdminProductList = () => {
   const [dispatch] = useContext(spinnerCT);
@@ -19,6 +21,17 @@ const AdminProductList = () => {
       dispatch({ type: "close" });
     });
   }, [currentPage]);
+
+  const deleteProduct = (id: number) => {
+    console.log(id);
+
+    productService.delete(id).then(() => {
+      toast.success("Update product successfully");
+      const filterProduct = products.filter((product) => product.id !== id);
+      setProducts(filterProduct);
+    });
+  };
+
   const totalPage = Math.ceil(totalProduct / limit);
   return (
     <div className="bg-white  rounded-xl p-5">
@@ -30,7 +43,7 @@ const AdminProductList = () => {
           Add new products
         </button>
       </Link>
-      <table className="table-auto">
+      <table className="table-auto mt-5">
         <thead>
           <tr>
             <th>Image</th>
@@ -43,7 +56,7 @@ const AdminProductList = () => {
         </thead>
         <tbody>
           {products.map((product) => (
-            <tr>
+            <tr key={product.id}>
               <td>
                 <img
                   className="w-20 h-20 object-cover"
@@ -60,7 +73,7 @@ const AdminProductList = () => {
                 </p>
               </td>
               <td>
-                <Link to="">
+                <Link to={`update-product/${product.id}`}>
                   <button
                     type="button"
                     className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
@@ -68,12 +81,21 @@ const AdminProductList = () => {
                     Edit
                   </button>
                 </Link>
-                <button
-                  type="button"
-                  className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                <Popconfirm
+                  title="Delete the task"
+                  description="Are you sure to delete this task?"
+                  onConfirm={() => deleteProduct(product.id)}
+                  okText="Yes"
+                  cancelText="No"
+                  okType={"danger"}
                 >
-                  Delete
-                </button>
+                  <button
+                    type="button"
+                    className="focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-900"
+                  >
+                    Delete
+                  </button>
+                </Popconfirm>
               </td>
             </tr>
           ))}

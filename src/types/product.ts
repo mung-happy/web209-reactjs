@@ -11,4 +11,18 @@ export interface Product{
     thumbnail: string,
     images: string[]
 }
+export interface FormProduct{
+    title: string,
+    description: string,
+    price: string,
+    category: string,
+    thumbnail: string,
+}
+export interface FormErrorProduct{
+    title?: string,
+    description?: string,
+    price?: string,
+    category?: string,
+    thumbnail?: string,
+}
 

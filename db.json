@@ -1,41 +1,20 @@
 {
   "products": [
     {
-      "id": 1,
       "title": "Tree Oil 30ml",
-      "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
-      "price": 12,
-      "discountPercentage": 4.09,
-      "rating": 4.52,
-      "stock": 78,
-      "brand": "Hemani Tea",
-      "category": "skincare",
       "thumbnail": "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/17/1.jpg",
-        "https://cdn.dummyjson.com/product-images/17/2.jpg",
-        "https://cdn.dummyjson.com/product-images/17/3.jpg",
-        "https://cdn.dummyjson.com/product-images/17/thumbnail.jpg"
-      ]
+      "price": 553,
+      "category": "skincare",
+      "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
+      "id": 1
     },
     {
-      "id": 2,
       "title": "Oil Free Moisturizer 100ml",
-      "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
-      "price": 40,
-      "discountPercentage": 13.1,
-      "rating": 4.56,
-      "stock": 88,
-      "brand": "Dermive",
-      "category": "skincare",
       "thumbnail": "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg",
-      "images": [
-        "https://cdn.dummyjson.com/product-images/18/1.jpg",
-        "https://cdn.dummyjson.com/product-images/18/2.jpg",
-        "https://cdn.dummyjson.com/product-images/18/3.jpg",
-        "https://cdn.dummyjson.com/product-images/18/4.jpg",
-        "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg"
-      ]
+      "price": 150,
+      "category": "skincare",
+      "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
+      "id": 2
     },
     {
       "id": 3,
@@ -819,6 +798,22 @@
         "https://cdn.dummyjson.com/product-images/60/3.jpg",
         "https://cdn.dummyjson.com/product-images/60/thumbnail.jpg"
       ]
+    },
+    {
+      "category": "hand bag",
+      "description": "bfgnhg",
+      "price": 3444,
+      "thumbnail": "êrtrtrt",
+      "title": "vcbvcbvfd",
+      "id": 45
+    },
+    {
+      "title": "Oil Free Moisturizer 100ml",
+      "thumbnail": "https://cdn.dummyjson.com/product-images/18/thumbnail.jpg",
+      "price": 98,
+      "category": "skincare",
+      "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
+      "id": 47
     }
   ]
 }

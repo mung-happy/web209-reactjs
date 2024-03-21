@@ -9,6 +9,8 @@ import AdminProductList from "./pages/AdminProductList";
 import Spinner from "./components/Spinner";
 import { createContext, useReducer } from "react";
 import spinnerAction from "./action/spinner";
+import AddProduct from "./pages/AddProduct";
+import UpdateProduct from "./pages/UpdateProduct";
 export const spinnerCT = createContext([(e: any) => {}]);
 const App = () => {
   const [state, dispatch] = useReducer(spinnerAction, false);
@@ -24,6 +26,8 @@ const App = () => {
           </Route>
           <Route path="/admin" element={<Admin />}>
             <Route index element={<AdminProductList />} />
+            <Route path="create-product" element={<AddProduct />} />
+            <Route path="update-product/:id" element={<UpdateProduct />} />
           </Route>
         </Routes>
         {state && <Spinner />}
