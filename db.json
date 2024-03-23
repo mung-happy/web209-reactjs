@@ -6,7 +6,8 @@
       "price": 553,
       "category": "skincare",
       "description": "Tea tree oil contains a number of compounds, including terpinen-4-ol, that have been shown to kill certain bacteria,",
-      "id": 1
+      "id": 1,
+      "images":[]
     },
     {
       "title": "Oil Free Moisturizer 100ml",
@@ -14,7 +15,8 @@
       "price": 150,
       "category": "skincare",
       "description": "Dermive Oil Free Moisturizer with SPF 20 is specifically formulated with ceramides, hyaluronic acid & sunscreen.",
-      "id": 2
+      "id": 2,
+      "images":[]
     },
     {
       "id": 3,

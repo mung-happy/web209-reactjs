@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-
+import logo from "../assets/logo.png";
 const Header = () => {
   return (
     <header>
@@ -135,7 +135,7 @@ const Header = () => {
       <div className="border-y border-[#676767]">
         <div className="mx-auto container flex items-center justify-between py-3">
           <div>
-            <img src="logo.png" className="w-[130px]" />
+            <img src={logo} className="w-[130px]" />
           </div>
           <div className="flex items-center gap-6">
             <div>
