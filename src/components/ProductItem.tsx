@@ -18,7 +18,7 @@ const ProductItem = ({ product }: Props) => {
         </div>
         <p>{product.category}</p>
       </div>
-      <Link to={`/products/${product.id}`}>
+      <Link to={`/products/${product._id}`}>
         <button className="w-full py-2 rounded border border-black">
           Product Detail
         </button>

@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import { FormErrorProduct, FormProduct } from "../types/product";
 import productService from "../services/product";
 import { toast } from "react-toastify";
-import productValidate from "../validation/product";
 import { useNavigate, useParams } from "react-router-dom";
+import { productSchema } from "../validation/product";
+import validate from "../utils/validation";
 
 const UpdateProduct = () => {
   const { id } = useParams();
@@ -19,8 +20,7 @@ const UpdateProduct = () => {
 
   useEffect(() => {
     if (id) {
-      const idProduct = Number(id);
-      productService.getDetail(idProduct).then((response) => {
+      productService.getDetail(id).then((response) => {
         const product = response.data;
         setForm({
           title: product.title,
@@ -52,7 +52,7 @@ const UpdateProduct = () => {
 
     e.preventDefault();
     if (id) {
-      const { value, errorMessage } = productValidate(form);
+      const { value, errorMessage } = validate(form, productSchema);
       if (errorMessage) {
         setErrorForm(errorMessage);
         return;

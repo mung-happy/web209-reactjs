@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { Product } from "../types/product";
 import productService from "../services/product";
 import { Link, useSearchParams } from "react-router-dom";
@@ -10,35 +10,33 @@ const limit = 10;
 const AdminProductList = () => {
   const [dispatch] = useContext(spinnerCT);
   const [urlParams] = useSearchParams();
-  const [totalProduct, setTotalProduct] = useState(0);
   const [products, setProducts] = useState<Product[]>([]);
   const currentPage = Number(urlParams.get("page") || 1);
+  const totalPage = useRef(0);
   useEffect(() => {
     dispatch({ type: "show" });
     productService.getList(limit, currentPage).then((response) => {
-      setProducts(response.data);
-      setTotalProduct(response.headers["x-total-count"]);
+      setProducts(response.data.docs);
+      totalPage.current = response.data.totalPages;
       dispatch({ type: "close" });
     });
   }, [currentPage]);
 
-  const deleteProduct = (id: number) => {
+  const deleteProduct = (id: string) => {
     console.log(id);
 
     productService.delete(id).then(() => {
       toast.success("Update product successfully");
-      const filterProduct = products.filter((product) => product.id !== id);
+      const filterProduct = products.filter((product) => product._id !== id);
       setProducts(filterProduct);
     });
   };
-
-  const totalPage = Math.ceil(totalProduct / limit);
   return (
     <div className="bg-white  rounded-xl p-5">
       <div className="mb-10">
         <h2 className="text-xl font-semibold">Admin Product List</h2>
       </div>
-      <Link className="mb-3" to="/admin/create-product">
+      <Link className="mb-3" to="create-product">
         <button className="px-3 h-10 bg-green-600 hover:bg-green-400 rounded-md text-black font-semibold">
           Add new products
         </button>
@@ -56,7 +54,7 @@ const AdminProductList = () => {
         </thead>
         <tbody>
           {products.map((product) => (
-            <tr key={product.id}>
+            <tr key={product._id}>
               <td>
                 <img
                   className="w-20 h-20 object-cover"
@@ -73,7 +71,7 @@ const AdminProductList = () => {
                 </p>
               </td>
               <td>
-                <Link to={`update-product/${product.id}`}>
+                <Link to={`update-product/${product._id}`}>
                   <button
                     type="button"
                     className="focus:outline-none text-white bg-yellow-400 hover:bg-yellow-500 focus:ring-4 focus:ring-yellow-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:focus:ring-yellow-900"
@@ -84,7 +82,7 @@ const AdminProductList = () => {
                 <Popconfirm
                   title="Delete the task"
                   description="Are you sure to delete this task?"
-                  onConfirm={() => deleteProduct(product.id)}
+                  onConfirm={() => deleteProduct(product._id)}
                   okText="Yes"
                   cancelText="No"
                   okType={"danger"}
@@ -102,7 +100,7 @@ const AdminProductList = () => {
         </tbody>
       </table>
       <div className="flex justify-center items-center mt-10">
-        <Pagination page={currentPage} totalPage={totalPage} />
+        <Pagination page={currentPage} totalPage={totalPage.current} />
       </div>
     </div>
   );

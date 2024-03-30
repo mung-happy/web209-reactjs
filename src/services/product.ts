@@ -1,7 +1,6 @@
 
 import { API } from "../constants/constant"
 import { https } from "../configs/axios"
-import { Product } from "../types/product"
 
 const productService ={
     getList(limit=30,page=1){
@@ -13,7 +12,7 @@ const productService ={
     getSame(){
         return https.get(API+`products`)
     },
-    getDetail(id:number){
+    getDetail(id:string){
         return https.get(API+`products/${id}`)
     },
     create(data:object){
@@ -22,7 +21,7 @@ const productService ={
     update(id:string,data:object){
         return https.put(API+`products/${id}`,data)
     },
-    delete(id:number){
+    delete(id:string){
         return https.delete(API+`products/${id}`)
     }
 }

@@ -11,6 +11,8 @@ import { createContext, useReducer } from "react";
 import spinnerAction from "./action/spinner";
 import AddProduct from "./pages/AddProduct";
 import UpdateProduct from "./pages/UpdateProduct";
+import Register from "./pages/Register";
+import Login from "./pages/SignIn";
 export const spinnerCT = createContext([(e: any) => {}]);
 const App = () => {
   const [state, dispatch] = useReducer(spinnerAction, false);
@@ -24,6 +26,8 @@ const App = () => {
             <Route path="products/:id" element={<DetailPage />} />
             <Route path="products" element={<ProductsPage />} />
           </Route>
+          <Route path="/sign-in" element={<Login />} />
+          <Route path="/sign-up" element={<Register />} />
           <Route path="/admin" element={<Admin />}>
             <Route index element={<AdminProductList />} />
             <Route path="create-product" element={<AddProduct />} />

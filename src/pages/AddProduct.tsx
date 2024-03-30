@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import { FormErrorProduct, FormProduct } from "../types/product";
 import productService from "../services/product";
 import { toast } from "react-toastify";
-import productValidate from "../validation/product";
 import { useNavigate } from "react-router-dom";
+import validate from "../utils/validation";
+import { productSchema } from "../validation/product";
 
 const AddProduct = () => {
   const navigate = useNavigate();
@@ -31,7 +32,7 @@ const AddProduct = () => {
 
   const onSubmit = (e: React.ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const { value, errorMessage } = productValidate(form);
+    const { value, errorMessage } = validate(form, productSchema);
     if (errorMessage) {
       setErrorForm(errorMessage);
       return;

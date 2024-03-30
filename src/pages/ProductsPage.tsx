@@ -1,4 +1,4 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import productService from "../services/product";
 import { Product } from "../types/product";
 import ProductItem from "../components/ProductItem";
@@ -9,18 +9,17 @@ const limit = 12;
 const ProductsPage = () => {
   const [dispatch] = useContext(spinnerCT);
   const [urlParams] = useSearchParams();
-  const [totalProduct, setTotalProduct] = useState(0);
   const [products, setProducts] = useState<Product[]>([]);
+  const totalPage = useRef(0);
   const currentPage = Number(urlParams.get("page") || 1);
   useEffect(() => {
     dispatch({ type: "show" });
     productService.getList(limit, currentPage).then((response) => {
-      setProducts(response.data);
-      setTotalProduct(response.headers["x-total-count"]);
+      setProducts(response.data.docs);
+      totalPage.current = response.data.totalPages;
       dispatch({ type: "close" });
     });
   }, [currentPage]);
-  const totalPage = Math.ceil(totalProduct / limit);
   return (
     <div className="container mx-auto mt-20">
       <div className="flex items-end justify-between">
@@ -33,11 +32,11 @@ const ProductsPage = () => {
       </div>
       <div className="grid grid-cols-4 gap-8 mt-8">
         {products.map((product: Product) => (
-          <ProductItem key={product.id} product={product} />
+          <ProductItem key={product._id} product={product} />
         ))}
       </div>
       <div className="flex justify-center mt-10">
-        <Pagination totalPage={totalPage} page={currentPage} />
+        <Pagination totalPage={totalPage.current} page={currentPage} />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import Joi from "joi"
 import { FormProduct } from "../types/product"
 
 
-const productSchema = Joi.object<FormProduct>({
+export const productSchema = Joi.object<FormProduct>({
     title: Joi.string().required().messages({
         "string.empty": "Please fill in the title field."
     }),
@@ -21,20 +21,3 @@ const productSchema = Joi.object<FormProduct>({
     }),
 }).options({abortEarly:false})
 
-const productValidate = (data:FormProduct)=>{
-    const {value,error} = productSchema.validate(data)
-    
-    let errorMessage:{ [key: string | number]:any } = {}
-    if(error){
-        error.details.forEach(detail =>{
-            errorMessage[detail.path[0]] = detail.message
-        });
-    }
-    if(Object.keys(errorMessage).length > 0){
-        return {value,errorMessage}
-    }
-    return {value,errorMessage:null}
-    
-}
-
-export default productValidate

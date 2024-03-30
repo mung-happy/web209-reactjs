@@ -1,4 +1,3 @@
-import { useQuery } from "@tanstack/react-query";
 import Baner from "../components/Baner";
 import productService from "../services/product";
 import { Product } from "../types/product";
@@ -15,11 +14,11 @@ const HomePage = () => {
   useEffect(() => {
     dispatch({ type: "show" });
     productService.getList(8).then((response) => {
-      setProducts(response.data);
+      setProducts(response.data.docs);
       dispatch({ type: "close" });
     });
-    productService.getTop().then((response) => {
-      setTopProduct(response.data);
+    productService.getList(8, 5).then((response) => {
+      setTopProduct(response.data.docs);
       dispatch({ type: "close" });
     });
   }, []);
@@ -44,7 +43,7 @@ const HomePage = () => {
         </div>
         <div className="grid grid-cols-4 gap-8 mt-8">
           {products.map((product: Product) => (
-            <ProductItem key={product.id} product={product} />
+            <ProductItem key={product._id} product={product} />
           ))}
         </div>
       </div>
@@ -67,7 +66,7 @@ const HomePage = () => {
         </div>
         <div className="grid grid-cols-4 gap-8 mt-8">
           {topProduct.map((product: Product) => (
-            <ProductItem key={product.id} product={product} />
+            <ProductItem key={product._id} product={product} />
           ))}
         </div>
       </div>

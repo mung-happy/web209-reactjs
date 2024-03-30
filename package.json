@@ -28,7 +28,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "concurrently \"react-scripts start\" \"json-server -w db.json -p 8000 -m ./node_modules/json-server-auth\"",
+    "start": "react-scripts start",
     "server": "json-server -w db.json -p 8000 -m ./node_modules/json-server-auth",
     "build": "react-scripts build",
     "test": "react-scripts test",
