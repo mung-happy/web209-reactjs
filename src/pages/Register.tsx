@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import { ErrorSignUp, SignUp } from "../types/auth";
 import authService from "../services/authService";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import validate from "../utils/validation";
 import { signUpSchema } from "../validation/auth";
 import logo from "../assets/logo.png";
@@ -130,12 +130,12 @@ const Register = () => {
           </div>
           <p className="text-sm mt-6 text-center">
             Already have an account?{" "}
-            <a
-              href=""
+            <Link
+              to="/sign-in"
               className="text-blue-600 font-semibold hover:underline ml-1"
             >
               Login here
-            </a>
+            </Link>
           </p>
         </form>
       </div>

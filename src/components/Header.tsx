@@ -1,6 +1,31 @@
 import { Link } from "react-router-dom";
 import logo from "../assets/logo.png";
+import React, { useRef, useState } from "react";
+import _ from "lodash";
+import productService from "../services/product";
+import { Product } from "../types/product";
 const Header = () => {
+  const formRef = useRef<HTMLFormElement>(null);
+  const [products, setProducts] = useState<Product[] | null>(null);
+  const fetchDataDebounce = _.debounce(
+    (e: React.ChangeEvent<HTMLInputElement>) => {
+      const { value } = e.target;
+      if (value) {
+        productService.getSearch(value).then((reponse) => {
+          setProducts(reponse.data.docs);
+        });
+      } else {
+        setProducts(null);
+      }
+    },
+    500
+  );
+  const handleReset = () => {
+    if (formRef.current) {
+      formRef.current.reset();
+      setProducts(null);
+    }
+  };
   return (
     <header>
       <div className="mx-auto container flex items-center justify-between py-3">
@@ -174,22 +199,21 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="#" className="p-2.5 block">
-                    About Us
-                  </Link>
-                </li>
-                <li>
                   <Link to="/admin" className="p-2.5 block">
                     Admin
                   </Link>
                 </li>
               </ul>
             </div>
-            <div>
-              <form className="border border-black rounded py-2 px-5 flex items-center gap-3">
+            <div className="relative">
+              <form
+                ref={formRef}
+                className="border border-black rounded py-2 px-5 w-52 flex items-center gap-3"
+              >
                 <input
                   type="text"
-                  className="w-14 h-6 outline-none placeholder:text-black"
+                  onChange={fetchDataDebounce}
+                  className="w-4/5 h-6 outline-none placeholder:text-black"
                   placeholder="Search"
                 />
                 <button>
@@ -211,6 +235,33 @@ const Header = () => {
                   </svg>
                 </button>
               </form>
+              {products && (
+                <div className="max-h-[200px] w-[300px] bg-slate-200 overflow-y-scroll absolute top-full left-0 p-2">
+                  {products?.length == 0 ? (
+                    <div className="h-10">
+                      <p className="text-red-400 font-bold">
+                        Không tìm thấy sản phẩm phù hợp
+                      </p>
+                    </div>
+                  ) : (
+                    products?.map((product) => (
+                      <Link
+                        to={`/products/${product._id}`}
+                        key={product._id}
+                        onClick={handleReset}
+                      >
+                        <div className="flex items-center gap-3 hover:bg-gray-400">
+                          <img className="h-10 w-10" src={product.thumbnail} />
+                          <div>
+                            <h2>{product.title}</h2>
+                            <p>$ {product.price}</p>
+                          </div>
+                        </div>
+                      </Link>
+                    ))
+                  )}
+                </div>
+              )}
             </div>
             <div className="flex items-center gap-6">
               <div className="flex flex-col items-center">

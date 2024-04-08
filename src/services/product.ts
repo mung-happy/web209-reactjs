@@ -3,14 +3,14 @@ import { API } from "../constants/constant"
 import { https } from "../configs/axios"
 
 const productService ={
-    getList(limit=30,page=1){
-        return https.get(API+`products?_limit=${limit}&_page=${page}`)
+    getList(limit=30,page=1,search=""){
+        return https.get(API+`products?_limit=${limit}&_page=${page}&search=${search}`)
     },
     getTop(){
         return https.get(API+`products?rating_gte=4.8&rating_lte=4.91`)
     },
-    getSame(){
-        return https.get(API+`products`)
+    getSearch(search=""){
+        return https.get(API+`products?_search=${search}`)
     },
     getDetail(id:string){
         return https.get(API+`products/${id}`)

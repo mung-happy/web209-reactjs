@@ -4,7 +4,7 @@ import { Product } from "../types/product";
 import ProductItem from "../components/ProductItem";
 import Ads from "../components/Ads";
 import { Link } from "react-router-dom";
-import { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { spinnerCT } from "../App";
 
 const HomePage = () => {
