@@ -13,10 +13,16 @@ import AddProduct from "./pages/AddProduct";
 import UpdateProduct from "./pages/UpdateProduct";
 import Register from "./pages/Register";
 import Login from "./pages/SignIn";
+import localStorageSevicer from "./services/localService";
+import PrivateRouter from "./pages/PrivateRouter";
 export const spinnerCT = createContext([(e: any) => {}]);
 const App = () => {
   const [state, dispatch] = useReducer(spinnerAction, false);
-
+  let isAdmin = false;
+  const data = localStorageSevicer.get()?.data;
+  if (data && data.role == "admin") {
+    isAdmin = true;
+  }
   return (
     <spinnerCT.Provider value={[dispatch]}>
       <BrowserRouter>
@@ -28,7 +34,10 @@ const App = () => {
           </Route>
           <Route path="/sign-in" element={<Login />} />
           <Route path="/sign-up" element={<Register />} />
-          <Route path="/admin" element={<Admin />}>
+          <Route
+            path="/admin"
+            element={<PrivateRouter user={isAdmin} children={<Admin />} />}
+          >
             <Route index element={<AdminProductList />} />
             <Route path="create-product" element={<AddProduct />} />
             <Route path="update-product/:id" element={<UpdateProduct />} />

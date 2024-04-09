@@ -198,6 +198,53 @@ const Header = () => {
                     Products
                   </Link>
                 </li>
+                <li className="relative group">
+                  Category
+                  <div className="absolute hidden group-hover:block w-[150px] items-center gap-3 bg-slate-200">
+                    <ul>
+                      <li className="hover:bg-gray-300">
+                        <Link
+                          className="px-1"
+                          to={"/products?category=skincare"}
+                        >
+                          Skincare
+                        </Link>
+                      </li>
+                      <li className="hover:bg-gray-300">
+                        <Link
+                          className="px-1"
+                          to={"/products?category=groceries"}
+                        >
+                          Groceries
+                        </Link>
+                      </li>
+                      <li className="hover:bg-gray-300">
+                        <Link
+                          className="px-1"
+                          to={"/products?category=home-decoration"}
+                        >
+                          Home Decoration
+                        </Link>
+                      </li>
+                      <li className="hover:bg-gray-300">
+                        <Link
+                          className="px-1"
+                          to={"/products?category=furniture"}
+                        >
+                          Furniture
+                        </Link>
+                      </li>
+                      <li className="hover:bg-gray-300">
+                        <Link
+                          className="px-1"
+                          to={"/products?category=mens-shirts"}
+                        >
+                          Mens Shirts
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </li>
                 <li>
                   <Link to="/admin" className="p-2.5 block">
                     Admin

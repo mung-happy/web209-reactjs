@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import validate from "../utils/validation";
 import { signInSchema } from "../validation/auth";
 import logo from "../assets/logo.png";
+import localStorageSevicer from "../services/localService";
 // import localStorageSevicer from "../services/localService";
 
 const Login = () => {
@@ -40,7 +41,7 @@ const Login = () => {
           autoClose: false,
           hideProgressBar: false,
         });
-        // localStorageSevicer.set(response.data);
+        localStorageSevicer.set(response.data);
         setTimeout(() => {
           navigate("/");
         }, 1000);

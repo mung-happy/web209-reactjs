@@ -12,14 +12,17 @@ const ProductsPage = () => {
   const [products, setProducts] = useState<Product[]>([]);
   const totalPage = useRef(0);
   const currentPage = Number(urlParams.get("page") || 1);
+  const category = urlParams.get("category") || "";
   useEffect(() => {
     dispatch({ type: "show" });
-    productService.getList(limit, currentPage).then((response) => {
-      setProducts(response.data.docs);
-      totalPage.current = response.data.totalPages;
-      dispatch({ type: "close" });
-    });
-  }, [currentPage]);
+    productService
+      .getList(limit, currentPage, "", category)
+      .then((response) => {
+        setProducts(response.data.docs);
+        totalPage.current = response.data.totalPages;
+        dispatch({ type: "close" });
+      });
+  }, [currentPage, category]);
   return (
     <div className="container mx-auto mt-20">
       <div className="flex items-end justify-between">
